@@ -1,4 +1,3 @@
-import {runC} from './picoc.js';
 "use strict";
 
 // Fix back button cache problem
@@ -33,7 +32,7 @@ function playground_text(playground) {
 
         let output = "";
 
-        runC(text, (t) => {
+        picocjs.runC(text, (t) => {
             output = output.concat(t);
             output = output.concat("\n");
             result_block.innerText = output;
